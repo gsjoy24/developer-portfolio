@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+
+/* reset and reusable styles */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
+	transition: 200ms;
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	-ms-transition: 200ms;
+	-o-transition: 200ms;
 }
 a {
 	text-decoration: none;
@@ -19,10 +26,14 @@ a {
 	color: #fff;
 	border-radius: 5px;
 	font-weight: 700;
+	cursor: pointer;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
+}
+.btn-primary:hover {
+	background-color: #e76306;
 }
 .btn-secondary {
 	padding: 8px 18px;
@@ -31,15 +42,51 @@ a {
 	color: #fd6e0a;
 	border-radius: 5px;
 	font-weight: 700;
+	cursor: pointer;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 }
+.btn-secondary:hover {
+	background-color: #fd6e0a;
+	color: #fff;
+}
+
+.section-title {
+	margin-bottom: 20px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.section-description {
+	font-size: 13px;
+	line-height: 20px;
+	text-align: center;
+}
+/* end reset and reusable styles */
+
+/* header styles */
+.header {
+	background-color: #fff8f3;
+	background-image: url(..//images/header_bg.png);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: bottom right;
+	position: relative;
+}
+.developer-img {
+	width: 68px;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+/* navbar styles */
 nav {
 	display: flex;
 	justify-content: space-between;
-	margin: 30px 120px 20px;
+	padding: 20px 120px;
 }
 nav h2 {
 	font-weight: 800;
@@ -51,6 +98,12 @@ nav ul {
 	list-style: none;
 }
 
+ul li a:hover {
+	color: #fd6e0a;
+	text-shadow: 2px 2px 5px #fff;
+}
+
+/* Banner styles */
 .banner {
 	margin: 0 120px;
 	display: flex;
@@ -69,11 +122,145 @@ nav ul {
 	line-height: 116px;
 }
 .banner-description {
+	font-size: 14px;
 	color: #757575;
 	font-weight: 400;
 	line-height: 20px;
 	margin-bottom: 30px;
 }
 .banner-img {
-	width: 400px;
+	width: 345px;
+	position: relative;
+	right: -180px;
+}
+.fa-download,
+.fa-phone {
+	margin-right: 5px;
+}
+/* main styles */
+main {
+	max-width: 900px;
+	margin: auto;
+}
+
+/* About section styles */
+.about {
+	max-width: 700px;
+	background-color: #fbe7d8;
+	margin: 100px auto;
+	text-align: center;
+	padding: 50px;
+}
+
+.about-info {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+.single-info p {
+	color: #757575;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+
+/* Skill section styles */
+.what-i-do {
+	padding: 50px;
+}
+
+.skills-container {
+	display: flex;
+	gap: 15px;
+	margin: 50px 0;
+}
+
+.skill {
+	padding: 20px;
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.238);
+	border-radius: 5px;
+}
+
+.skill img {
+	width: 30px;
+}
+.skill h5 {
+	margin: 15px 0;
+	color: #181818;
+	font-weight: 700;
+}
+.skill p {
+	font-size: 14px;
+}
+
+/* resume section styles */
+.resume {
+	margin-bottom: 80px;
+}
+.resume-container {
+	margin: 70px 0;
+	display: flex;
+	justify-content: space-around;
+	color: #474747;
+}
+
+.both-resume-title {
+	margin-bottom: 10px;
+}
+
+.resume-item {
+	margin-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #474747;
+}
+.resume-title {
+	font-weight: 700;
+	line-height: 20px;
+}
+.resume-sub-title {
+	display: inline-block;
+	line-height: 30px;
+	padding-bottom: 10px;
+}
+.resume-description {
+	font-size: 13px;
+	max-width: 300px;
+}
+.resume-btn {
+	text-align: center;
+}
+
+/* footer section styles */
+.footer {
+	background-color: #fff8f3;
+}
+.footer-container {
+	max-width: 900px;
+	margin: auto;
+	padding: 50px 0;
+	display: flex;
+	justify-content: space-around;
+}
+.footer-title {
+	margin-bottom: 20px;
+}
+.footer-description {
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+.social-icons i {
+	font-size: 20px;
+	color: #fd6e0a;
+	margin-right: 10px;
+}
+.footer-form input,
+.footer-form textarea {
+	padding: 10px;
+	min-width: 300px;
+	margin-bottom: 5px;
+	border: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
